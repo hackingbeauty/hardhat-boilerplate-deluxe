@@ -1,0 +1,52 @@
+:local(.styles) {
+  position: relative;
+  z-index: 1;
+  background: $darkGreenBlack;
+  height: 300px;
+  width: 100%;
+  text-align: center;
+  padding: 40px 0 0 0;
+
+  img.icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  #footer-logo {
+    margin-bottom: 40px;
+  }
+
+  #footer-contact-link {
+    text-transform: uppercase;
+    color: $turquoiseNeon;
+    display: block;
+    font-size: 14px;
+  }
+
+  p {
+    color: $white;
+    font-size: 28px;
+    margin-top: 15px;
+    padding: 0 20px;
+  }
+
+  ul.social {
+    display: inline-block; 
+
+    li {
+      float: left;
+      margin: 0 25px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    height: 100%;
+
+    ul.social {
+      li {
+        float: none;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

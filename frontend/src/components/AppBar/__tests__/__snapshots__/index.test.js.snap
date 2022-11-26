@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  class="styles"
+>
+  <header
+    class="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary app-bar MuiPaper-elevation1"
+  >
+    <div>
+      Hello World
+    </div>
+  </header>
+</div>
+`;

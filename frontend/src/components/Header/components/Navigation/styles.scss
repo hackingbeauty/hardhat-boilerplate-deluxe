@@ -1,0 +1,74 @@
+:local(.styles) {
+  width: 100%;
+
+  #main-nav {
+    text-align: left;
+    margin-left: 220px;
+
+    .navigation {
+      display: block;
+    }
+  }
+
+  .tab-indicator {
+    display: none;
+  }
+
+  #right-button {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+
+    a:hover {
+      text-decoration: none;
+    }
+ }
+
+  #launch-app-btn {
+    background: linear-gradient(271.53deg, rgba(191, 201, 245, 0.5) -60.81%, rgba(142, 161, 245, 0.5) -60.79%, #26CBCF 105.36%);
+    border-radius: $radius;
+    padding: 5px 20px;
+    color: $white;
+    position: relative;
+
+    .icon {
+      float: right;
+      position: relative;
+      top: -4px;
+      right: -5px;
+    }
+  }
+
+  /* responsive mobile header styles */
+  @media (max-width: 1300px) {
+    #main-nav {
+      margin-left: 180px;
+    }
+
+  }
+  
+  /* responsive mobile header styles */
+  @media (max-width: 1250px) {
+    #main-nav {
+      display: none;
+      margin-left: 0px;
+      box-shadow: $standardShadow;
+      padding: 20px 20px 40px 20px;
+      border-bottom-left-radius: $radius;
+      border-bottom-right-radius: $radius;
+      position: absolute;
+      width: 100%;
+      top: 70px;
+      left: 0;
+
+      &.show {
+        display: block;
+      }
+    }
+
+    #right-button {
+      position: initial;
+      margin-top: 15px;
+    }
+  }
+}
