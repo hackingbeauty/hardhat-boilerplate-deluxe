@@ -1,8 +1,10 @@
 # Hardhat Boilerplate Deluxe
 
 This repository contains a sample project that you can use as the starting point
-for your Ethereum project. It's also a great fit for learning the basics of
-Smart Contract development.
+for your Ethereum project.
+
+It's also a great fit for learning the basics of
+Smart Contracts for development of [fat protocols](https://www.usv.com/writing/2016/08/fat-protocols/), and [thin applications](https://www.placeholder.vc/blog/2020/1/30/thin-applications) that use shared data on a distributed ledger.
 
 This project is intended to be used with the
 [Decentralized Exchange Code Development](https://www.youtube.com/playlist?list=PLBy3Qkuapv_7vhUN4wX4s2G-AF0-Do5v_) video series, but you should be
@@ -84,11 +86,13 @@ This project also includes [a sample frontend/Dapp](./frontend), which uses [Cre
 
 ## Develop A Decentralized Exchange
 
-To get guidance on how this foundational boilerplate is used, consider developing a decentralized exchange powered by Automated Market Maker technology.
+If you're new to developing DeFi protocols and decentralized applications on Ethereum, consider developing a decentralized exchange powered by Automated Market Maker technology.  It's a great way to bootstrap your knowledge of how these software systems work.
 
 To learn how to do this, check out the [Decentralized Exchange Code Development](https://www.youtube.com/playlist?list=PLBy3Qkuapv_7vhUN4wX4s2G-AF0-Do5v_) 5-part series at "Web3 Blockchain Developer" and get step-by-step guidance.
 
-There are two run-time targets you have to learn how to develop for if you want to implement decentralized business models on Ethereum.  The first run-time target is the EVM (Ethereum Virtual Machine) which is the general purpose computer that processes Smart Contracts.  The second run-time target is the Web which allows you to add an excellent UI/UX to your DeFi protocols or decentralized applications.
+There are two run-time targets you have to learn how to develop for if you want to implement decentralized business models on Ethereum.  The first run-time target is the EVM (Ethereum Virtual Machine) which is the general purpose computer that processes Smart Contracts.  
+
+The second run-time target is the Web which allows you to connect a UI/UX to your DeFi protocols or decentralized applications.
 
 
 ## Getting help and updates
