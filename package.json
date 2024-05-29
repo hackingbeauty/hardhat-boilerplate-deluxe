@@ -1,0 +1,43 @@
+{
+  "name": "hardhat-boilerplate-deluxe",
+  "version": "1.0.0",
+  "description": "A boilerplate to help you build secure & decentralized contracts for Etherem",
+  "scripts": {
+    "test": "hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackingbeauty/hardhat-boilerplate-deluxe"
+  },
+  "author": "Mark-Joseph (Muskardin)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hackingbeauty/hardhat-boilerplate-deluxe"
+  },
+  "homepage": "https://github.com/hackingbeauty/hardhat-boilerplate-deluxe#readme",
+  "devDependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/providers": "^5.7.2",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.5",
+    "@nomicfoundation/hardhat-ignition": "^0.15.4",
+    "@nomicfoundation/hardhat-ignition-ethers": "^0.15.4",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.7",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.7",
+    "@nomicfoundation/ignition-core": "^0.15.4",
+    "@nomiclabs/hardhat-ethers": "2.2.1",
+    "@nomiclabs/hardhat-etherscan": "^3.0.0",
+    "@typechain/ethers-v5": "^10.1.0",
+    "@typechain/hardhat": "^6.1.2",
+    "@types/mocha": ">=9.1.0",
+    "chai": "^4.3.7",
+    "dotenv": "^16.4.5",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.5",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.2",
+    "ts-node": ">=8.0.0",
+    "typechain": "^8.1.0",
+    "typescript": ">=4.5.0"
+  }
+}
