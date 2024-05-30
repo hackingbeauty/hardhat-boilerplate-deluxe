@@ -2,6 +2,7 @@
 // yours, or create new ones.
 
 const path = require("path");
+const hre = require("hardhat");
 
 async function main() {
   // This is just a convenience check
@@ -20,16 +21,23 @@ async function main() {
     await deployer.getAddress()
   );
 
-  console.log("Account balance:", (await deployer.getBalance()).toString());
+  const accountBalance = await deployer.provider.getBalance(deployer.address);
+  
+  console.log("------- Account balance: ", accountBalance);
+  console.log("------- Deployer address is: ------- ", deployer.address);
 
-  const Token = await ethers.getContractFactory("Token");
-  const token = await Token.deploy();
-  await token.deployed();
+  const sampleToken = await hre.ethers.deployContract("SampleToken", [
+    "Sample Token",
+    "ST",
+    18,
+    deployer.address
+  ], {});
+  await sampleToken.waitForDeployment();
 
-  console.log("Token address:", token.address);
-
-  // We also save the contract's artifacts and address in the frontend directory
-  saveFrontendFiles(token);
+  console.log('--- Deployed Contract address: ', sampleToken.target)
+  
+  // Also save the contract's artifacts and address in the frontend directory
+  saveFrontendFiles(sampleToken);
 }
 
 function saveFrontendFiles(token) {
@@ -45,10 +53,10 @@ function saveFrontendFiles(token) {
     JSON.stringify({ Token: token.address }, undefined, 2)
   );
 
-  const TokenArtifact = artifacts.readArtifactSync("Token");
+  const TokenArtifact = artifacts.readArtifactSync("SampleToken");
 
   fs.writeFileSync(
-    path.join(contractsDir, "Token.json"),
+    path.join(contractsDir, "SampleToken.json"),
     JSON.stringify(TokenArtifact, null, 2)
   );
 }
