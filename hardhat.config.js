@@ -7,17 +7,22 @@ require("./tasks/faucet");
 require("hardhat-gas-reporter");
 require('dotenv').config();
 
+const {
+  REPORT_GAS,
+  COINMARKETCAP_API_KEY
+} = process.env;
+
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.8.24",
+  solidity: "0.8.28",
   networks: {
     hardhat: {
       chainId: 1337 // We set 1337 to make interacting with MetaMask simpler
     }
   },
   gasReporter: {
-    enabled: process.env.REPORT_GAS === "true" ? true : false,
+    enabled: REPORT_GAS === "true" ? true : false,
     currency: "USD",
-    coinmarketcap: process.env.COINMARKETCAP_API_KEY
+    coinmarketcap: COINMARKETCAP_API_KEY
   }
 };
