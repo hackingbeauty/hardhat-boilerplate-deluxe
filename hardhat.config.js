@@ -1,11 +1,14 @@
-require("@nomicfoundation/hardhat-toolbox");
 
 // The next line is part of the sample project, you don't need it in your
 // project. It imports a Hardhat task definition, that can be used for
 // testing the frontend.
-require("./tasks/faucet");
+require("@nomicfoundation/hardhat-toolbox");
+require("@nomicfoundation/hardhat-ethers");
+require("solidity-coverage");
 require("hardhat-gas-reporter");
-require('dotenv').config();
+require("@nomicfoundation/hardhat-verify");
+require("hardhat-contract-sizer");
+require("dotenv").config();
 
 const {
   REPORT_GAS,
@@ -24,5 +27,11 @@ module.exports = {
     enabled: REPORT_GAS === "true" ? true : false,
     currency: "USD",
     coinmarketcap: COINMARKETCAP_API_KEY
+  },  
+  contractSizer: {
+    alphaSort: true,
+    disambiguatePaths: false,
+    runOnCompile: true,
+    strict: true
   }
 };
