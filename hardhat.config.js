@@ -1,7 +1,3 @@
-
-// The next line is part of the sample project, you don't need it in your
-// project. It imports a Hardhat task definition, that can be used for
-// testing the frontend.
 require("@nomicfoundation/hardhat-toolbox");
 require("@nomicfoundation/hardhat-ethers");
 require("solidity-coverage");
@@ -11,8 +7,11 @@ require("hardhat-contract-sizer");
 require("dotenv").config();
 
 const {
+  ALCHEMY_API_URL,
+  COINMARKETCAP_API_KEY,
+  ETHERSCAN_API_KEY,
+  METAMASK_PRIVATE_KEY,
   REPORT_GAS,
-  COINMARKETCAP_API_KEY
 } = process.env;
 
 /** @type import('hardhat/config').HardhatUserConfig */
@@ -21,6 +20,10 @@ module.exports = {
   networks: {
     hardhat: {
       chainId: 1337 // We set 1337 to make interacting with MetaMask simpler
+    },
+    sepolia: {
+      url: ALCHEMY_API_URL,
+      accounts: [`0x${METAMASK_PRIVATE_KEY}`]
     }
   },
   gasReporter: {
