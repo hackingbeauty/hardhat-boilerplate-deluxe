@@ -1,8 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
-require("@nomicfoundation/hardhat-ethers");
+require("@nomiclabs/hardhat-ethers");
 require("solidity-coverage");
 require("hardhat-gas-reporter");
-require("@nomicfoundation/hardhat-verify");
 require("hardhat-contract-sizer");
 require("dotenv").config();
 
